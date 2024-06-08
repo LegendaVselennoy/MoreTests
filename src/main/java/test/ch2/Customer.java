@@ -17,6 +17,11 @@ public class Customer {
         this.name = name;
     }
 
+    public Customer(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public static class Builder {
         private Gender gender;
         private String lastName;
