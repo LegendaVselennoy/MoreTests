@@ -1,7 +1,5 @@
 package ch8.web;
 
-import ch8.web.MockConnectionFactory;
-import ch8.web.MockInputStream;
 import org.junit.jupiter.api.Test;
 import test.ch8.web.WebClient2;
 

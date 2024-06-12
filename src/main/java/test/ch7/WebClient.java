@@ -1,11 +1,18 @@
 package test.ch7;
 
+import org.htmlunit.WebResponse;
+import org.htmlunit.WebWindow;
+import org.htmlunit.html.HtmlPage;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class WebClient {
+
+    private WebWindow webWindow;
+    private WebResponse webResponse;
 
     public String getContent(URL url) {
         StringBuffer content = new StringBuffer();
@@ -28,4 +35,11 @@ public class WebClient {
         return content.toString();
     }
 
+    public void close(){
+        //
+    }
+
+    public HtmlPage getPage(String s) {
+        return new HtmlPage(webResponse,webWindow);
+    }
 }
